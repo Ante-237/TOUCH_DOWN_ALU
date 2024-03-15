@@ -11,10 +11,10 @@ public class CharacterMovement : MonoBehaviour
     
     protected void Movements()
     {
-        HorizontalDirection = Input.GetAxisRaw("Horizontal");
-        VerticalDirection = Input.GetAxisRaw("Vertical");
+        HorizontalDirection = Input.GetAxis("Horizontal");
+        VerticalDirection = Input.GetAxis("Vertical");
 
-        transform.position += new Vector3(VerticalDirection * MovementSpeed * Time.deltaTime, 0, HorizontalDirection * MovementSpeed * Time.deltaTime) ;
+        transform.position += new Vector3(-VerticalDirection * MovementSpeed * Time.deltaTime, 0, HorizontalDirection * MovementSpeed * Time.deltaTime) ;
        // transform.Translate(HorizontalDirection * MovementSpeed * Time.deltaTime,0, VerticalDirection * MovementSpeed * Time.deltaTime);
     }
 }
